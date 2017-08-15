@@ -11,7 +11,7 @@ RUN apt-get -y update && apt-get -y install build-essential libssl-dev libboost-
     cd groestlcoin && ./autogen.sh && ./configure && make && make install && \
     rm -rf /tmp/*
 
-EXPOSE 15001
+EXPOSE 15001 15002
 
 ENTRYPOINT ["/init"]
 VOLUME ["/data"]
